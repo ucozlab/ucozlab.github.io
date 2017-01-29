@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game 0 - tic tac toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="dist/css/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 text-left">
+                    <p>player X</p>
+                    <p><span class="js-won" data-id="1">0</span><span> won</span></p>
+                </div>
+                <div class="col-6 text-center">
+                    <h1>Game <span class="js-game">0</span></h1>
+                </div>
+                <div class="col-3 text-right">
+                    <p>cpu 0</p>
+                    <p><span class="js-won" data-id="0">0</span><span> won</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="board">
+                        <div class="column">
+                            <a href="javascript://" class="square" data-square="0">X</a>
+                            <a href="javascript://" class="square" data-square="3">O</a>
+                            <a href="javascript://" class="square" data-square="6">X</a>
+                        </div>
+                        <div class="column">
+                            <a href="javascript://" class="square" data-square="1">O</a>
+                            <a href="javascript://" class="square" data-square="4">X</a>
+                            <a href="javascript://" class="square" data-square="7">O</a>
+                        </div>
+                        <div class="column">
+                            <a href="javascript://" class="square" data-square="2">O</a>
+                            <a href="javascript://" class="square" data-square="5">X</a>
+                            <a href="javascript://" class="square" data-square="8">X</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="page-clearfix"></div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="copyright">&copy; Artem Ucozlab 4 masters courses</div>
+    </div>
+</footer>
+<script src="dist/js/main.js"></script>
+</body>
+</html>
