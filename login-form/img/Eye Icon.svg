@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Eye Slash - FontAwesome</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="12.6" font-family="FontAwesome" font-weight="normal">
+        <g id="login-page" transform="translate(-626.000000, -285.000000)" fill="#D3D8DB">
+            <g id="Right-side" transform="translate(443.000000, 175.000000)">
+                <g id="form">
+                    <text id="Eye-Slash---FontAwesome">
+                        <tspan x="183" y="119"></tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="24px" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="The-login-is-successful" transform="translate(-385.000000, -198.000000)" fill="#FFBA33">
+            <path d="M414.049,200.009 L413.19,199.151 C412.247,198.206 410.702,198.206 409.756,199.151 L395.172,213.737 L389.997,208.564 C389.054,207.62 387.508,207.62 386.565,208.565 L385.707,209.422 C384.764,210.366 384.764,211.911 385.707,212.855 L393.451,220.607 C394.395,221.55 395.94,221.55 396.884,220.607 L414.049,203.442 C414.991,202.498 414.991,200.953 414.049,200.009 L414.049,200.009 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

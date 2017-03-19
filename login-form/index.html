@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login form test task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+<div class="page">
+    <div class="wrapper">
+        <div class="login">
+            <div class="login-image pull-left">
+                <img src="img/left-side.svg" class="Left-side">
+            </div>
+            <div class="login-content">
+                <div class="card">
+                    <figure class="front">
+                        <div class="login-content__form-container login-content__form">
+                            <form action="" class="form" onsubmit="loginApp.login(event, this)">
+                                <div class="form-header container-fluid">
+                                    <h2 class="pull-left">Already member</h2>
+                                    <div class="pull-right popup">
+                                        <a href="javascript://">need help?</a>
+                                        <div class="popup-content">
+                                            <code>
+                                                <p>login: <span>test</span></p>
+                                                <p>password: <span>123</span></p>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <fieldset class="form-fieldset">
+                                    <input name="login-name" size="30" onkeyup="loginApp.removeInputError(this)" type="text" maxlength="32" required="required" class="login" id="login-name" placeholder="Enter your name" aria-required="true" aria-invalid="false" autocomplete="off">
+                                    <input name="login-password" size="30" onkeyup="loginApp.removeInputError(this)" type="password" maxlength="32" required="required" class="password" id="login-password" placeholder="Enter your password" aria-required="true" aria-invalid="false" autocomplete="off">
+                                </fieldset>
+                                <div class="form-actions container-fluid">
+                                    <button type="submit" class="btn">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </figure>
+                    <figure class="back">
+                        <div class="login-content__form-container newmember clearfix">
+                            <form action="" class="form newmember-form" onsubmit="loginApp.newMember(event, this)">
+                                <div class="form-header container-fluid">
+                                    <h2 class="pull-left">New member</h2>
+                                </div>
+                                <fieldset class="form-fieldset">
+                                    <input name="login-name" size="30" type="text" maxlength="32" required="required" class="login" placeholder="Enter your name" aria-required="true" aria-invalid="false" autocomplete="off">
+                                    <input name="login-password" size="30" type="password" maxlength="32" required="required" class="password" placeholder="Enter your password" aria-required="true" aria-invalid="false" autocomplete="off">
+                                </fieldset>
+                                <div class="form-actions container-fluid">
+                                    <button type="submit" class="btn">Sign Up</button>
+                                </div>
+                            </form>
+                            <div class="informer-sign">
+                                <svg width="30px" height="24px" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="The-login-is-successful" transform="translate(-385.000000, -198.000000)" fill="#FFBA33">
+                                            <path d="M414.049,200.009 L413.19,199.151 C412.247,198.206 410.702,198.206 409.756,199.151 L395.172,213.737 L389.997,208.564 C389.054,207.62 387.508,207.62 386.565,208.565 L385.707,209.422 C384.764,210.366 384.764,211.911 385.707,212.855 L393.451,220.607 C394.395,221.55 395.94,221.55 396.884,220.607 L414.049,203.442 C414.991,202.498 414.991,200.953 414.049,200.009 L414.049,200.009 Z" id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="login-content__footer">
+                    <p>Don’t have an account yet ?</p>
+                    <a class="create-account_link" href="javascript://" onclick="loginApp.flipCard(event)" >Create an account</a>
+                </div>
+            </div>
+        </div>
+        <div class="informer">
+            <div class="informer-sign">
+                <svg width="30px" height="24px" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="The-login-is-successful" transform="translate(-385.000000, -198.000000)" fill="#FFBA33">
+                            <path d="M414.049,200.009 L413.19,199.151 C412.247,198.206 410.702,198.206 409.756,199.151 L395.172,213.737 L389.997,208.564 C389.054,207.62 387.508,207.62 386.565,208.565 L385.707,209.422 C384.764,210.366 384.764,211.911 385.707,212.855 L393.451,220.607 C394.395,221.55 395.94,221.55 396.884,220.607 L414.049,203.442 C414.991,202.498 414.991,200.953 414.049,200.009 L414.049,200.009 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <p class="informer-text">Login successful</p>
+            <a class="informer-btn btn" href="javascript://" onclick="loginApp.back()">Continue</a>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
