@@ -20,5 +20,5 @@ xmlHttp.onreadystatechange = function() {
   }
 };
 
-xmlHttp.open("GET", "https://ucozlab.github.io/telegram_chart/data/chart-data.json", true);
+xmlHttp.open("GET", "https://ucozlab.github.io/telegram-chart/data/chart-data.json", true);
 xmlHttp.send();

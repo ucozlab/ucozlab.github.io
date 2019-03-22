@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4709ab-eca9-4b04-bd78-5b0eb7d806f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-chart/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-chart/js/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youtube-api/auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state>
               <caret line="4" column="63" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="63" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -44,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/youtube-search/search.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+              <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -56,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/youtube-search/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -65,16 +64,16 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/telegram_chart/js/index.js">
+        <entry file="file://$PROJECT_DIR$/telegram-chart/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="330">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -100,6 +99,7 @@
         <option value="$PROJECT_DIR$/youtube-search/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/telegram_chart/js/index.js" />
+        <option value="$PROJECT_DIR$/telegram-chart/js/index.js" />
       </list>
     </option>
   </component>
@@ -123,12 +123,12 @@
             <path>
               <item name="ucozlab.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="ucozlab.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="telegram_chart" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-chart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ucozlab.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="ucozlab.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="telegram_chart" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-chart" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -181,12 +181,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490537740236</updated>
       <workItem from="1490537741533" duration="1968000" />
-      <workItem from="1553237500479" duration="1199000" />
+      <workItem from="1553237500479" duration="1327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3167000" />
+    <option name="totallyTimeSpent" value="3295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1672" height="1010" extended-state="0" />
@@ -217,7 +217,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/youtube-api/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state>
           <caret line="4" column="63" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="63" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -235,7 +235,7 @@
     <entry file="file://$PROJECT_DIR$/youtube-search/search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -245,21 +245,28 @@
     <entry file="file://$PROJECT_DIR$/youtube-search/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telegram_chart/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telegram_chart/js/index.js">
+    <entry file="file://$PROJECT_DIR$/telegram-chart/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        <state relative-caret-position="330">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
         </state>
       </provider>
     </entry>
