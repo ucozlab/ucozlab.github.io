@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700,400,600);
+html, body {
+    height: 100%;
+}
+body {
+    color:#454849;
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+    line-height:20px;
+}
+
+.page {
+    padding: 20px;
+}
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+}
+.chart {
+    width: 360px;
+    margin: 0 20px 20px 0;
+}
+.chart__main {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+.chart__labels {
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.chart__labels .label {
+    color: #979797;
+    font-size: 11px;
+    transition: all 0.3s ease;
+}
+.label--hide {
+    transform: translateY(-15px);
+    opacity: 0;
+}
+.label--show {
+    transform: none;
+    opacity: 1;
+}
+.label--hidden {
+    transform: translateY(15px);
+    opacity: 0;
+}
+.chart__labels--vertical {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+}
+.chart__labels--vertical--slide-up {
+    top: -20px;
+    opacity: 0;
+}
+.chart__labels--vertical--no-transition {
+    top: -20px;
+    opacity: 0;
+}
+.chart__labels--vertical .label {
+    width: 100%;
+    position: absolute;
+    padding: 0 0 0 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.chart__labels--horizontal {
+    height: 24px;
+    display: flex;
+}
+.chart__labels--horizontal .label {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    transition: all 0.3s ease;
+}
+.chart__scrollable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.chart__canvas {
+    position: relative;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.chart__map {
+    position: relative;
+    height: 40px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+.chart__track {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.chart__canvas-map {
+    height: 40px;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+.track {
+    background: #dedede;
+    width: 2px;
+    position:absolute;
+    top: 0;
+    height: 100%;
+    z-index: 4;
+    cursor: ew-resize;
+}
+.track:before {
+    content: "";
+    width: 8px;
+    position: absolute;
+    top: 0;
+    left: -4px;
+    height: 100%;
+}
+.track--left {
+    left: 0;
+}
+.track--right {
+    right: 0;
+}
+.ui-checkbox {
+    display: inline-block;
+    margin: 0 10px 20px 0;
+}
+.ui-checkbox__input {
+    display: none;
+}
+.ui-checkbox__label {
+    position: relative;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    padding: 4px 10px 4px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+.ui-checkbox__mark {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/check-mark.svg);
+    transition: all 0.3s ease;
+}
+.ui-checkbox__input--unchecked + .ui-checkbox__label .ui-checkbox__mark {
+    background-image: none !important;
+    background-color: transparent !important;
+}
