@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.7ec84231.chunk.js",
-    "main.js.map": "/static/js/main.7ec84231.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e0429997.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e0429997.js.map",
-    "static/js/2.22403f14.chunk.js": "/static/js/2.22403f14.chunk.js",
-    "static/js/2.22403f14.chunk.js.map": "/static/js/2.22403f14.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.b869fef728b3d7ca5aaf774c96b187c3.js": "/precache-manifest.b869fef728b3d7ca5aaf774c96b187c3.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.22403f14.chunk.js.LICENSE.txt": "/static/js/2.22403f14.chunk.js.LICENSE.txt"
+    "main.js": "/solar/static/js/main.31d51c29.chunk.js",
+    "main.js.map": "/solar/static/js/main.31d51c29.chunk.js.map",
+    "runtime-main.js": "/solar/static/js/runtime-main.fc27472c.js",
+    "runtime-main.js.map": "/solar/static/js/runtime-main.fc27472c.js.map",
+    "static/js/2.22403f14.chunk.js": "/solar/static/js/2.22403f14.chunk.js",
+    "static/js/2.22403f14.chunk.js.map": "/solar/static/js/2.22403f14.chunk.js.map",
+    "index.html": "/solar/index.html",
+    "precache-manifest.77a6c1388dcb9a9c8cb7299f45c891c9.js": "/solar/precache-manifest.77a6c1388dcb9a9c8cb7299f45c891c9.js",
+    "service-worker.js": "/solar/service-worker.js",
+    "static/js/2.22403f14.chunk.js.LICENSE.txt": "/solar/static/js/2.22403f14.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e0429997.js",
+    "static/js/runtime-main.fc27472c.js",
     "static/js/2.22403f14.chunk.js",
-    "static/js/main.7ec84231.chunk.js"
+    "static/js/main.31d51c29.chunk.js"
   ]
 }
