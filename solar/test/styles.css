@@ -1,0 +1,30 @@
+#wrapper {
+    width: 1920px;
+}
+
+#container {
+    display: block;
+    width: 640px;
+    height: 640px;
+    float: left;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+#img_container {
+    display: inline-block;
+    width: 640px;
+    height: 640px;
+    float: right;
+}
+
+#mapAutocomplete {
+    width: 97.25%;
+    margin: 0.5em;
+}
+
+#mapCanvas {
+    width: 624px;
+    height: 624px;
+    margin: 0.5em;
+}

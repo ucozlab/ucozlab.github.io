@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>simple demo</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="wrapper">
+  <div id="container">
+    <div id="c2">
+      <input id="autocompleteInput" style="width: 86%; margin: 1em; display: inline-block;">
+      <button style="display: inline-block" onclick="clearInput();">Clear</button>
+    </div>
+    <div id="map" style="height: 100%">
+    </div>
+    <button style="width: 100%; margin-top: 0.5em;" onclick="houseSelected()">This is my house</button>
+    <input type="range" min="1" max="100" value="100" class="slider" id="panelsCount" style="width: 100%" oninput="sliderUpdate()">
+  </div>
+  <div id="divother" style="margin-left: 5px;">
+    <p>ac_annual: <label id="ac_annual">1.0</label></p>
+    <p>capacity_factor: <label id="capacity_factor">1.0</label></p>
+    <p>solrad_annual: <label id="solrad_annual">1.0</label></p>
+  </div>
+</div>
+<script>
+  let addressInput = document.getElementById('autocompleteInput');
+  let slider = document.getElementById('panelsCount');
+
+  let ac_annual = document.getElementById('ac_annual');
+  let capacity_factor = document.getElementById('capacity_factor');
+  let solrad_annual = document.getElementById('solrad_annual');
+  let current_ac_annual = 0.0;
+  let total_ac_annual = 0.0;
+  let marker = null;
+  let panels = [];
+
+  function clearInput() {
+    addressInput.value = "";
+    if (marker !== null) {
+      marker.setMap(null);
+      marker = null;
+    }
+  }
+
+  function placeMarker(map, pos) {
+    if (marker === null) {
+      marker = new google.maps.Marker({
+        position: pos,
+        map: map
+      });
+    } else {
+      marker.setPosition(pos);
+    }
+  }
+
+  function initMap() {
+    let myLatlng = {lat: 38.9443948, lng: -77.005108};
+    let map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 19,
+      center: myLatlng,
+      mapTypeId: 'satellite',
+      tilt: 0,
+      animatedZoom: false
+    });
+    let autocomplete = new google.maps.places.Autocomplete(addressInput);
+    let maxZoomService = new google.maps.MaxZoomService();
+
+    function goMaxZoom(pos) {
+      maxZoomService.getMaxZoomAtLatLng(pos, function(response){
+        if (response.status === 'OK') {
+          map.setZoom(20);
+        }
+      });
+    }
+
+    window.sliderUpdate = function() {
+      for (let i = 0; i < panels.length; ++i) {
+        if (i < slider.value) {
+          panels[i].setVisible(true);
+        } else {
+          panels[i].setVisible(false);
+        }
+      }
+      total_ac_annual = current_ac_annual * slider.value;
+      ac_annual.innerText = total_ac_annual;
+    };
+
+
+
+    window.houseSelected = function() {
+      map.panTo(marker.position);
+      let center = marker.position;
+      goMaxZoom(center);
+      let listener = null;
+      let action_func = function() {
+        let zoom = map.getZoom();
+        let bounds = map.getBounds();
+        let ne = bounds.getNorthEast();
+        let sw = bounds.getSouthWest();
+        let ne_s = ne.toString();
+        let sw_s = sw.toString();
+        marker.setMap(null);
+        marker = null;
+
+        const xhr = new XMLHttpRequest();
+        let url = "http://18.237.88.216:8080/roof_map?";
+        url += "lat=" + center.lat().toString() + "&";
+        url += "lng=" + center.lng().toString() + "&";
+        url += "ne=" + ne_s + "&";
+        url += "sw=" + sw_s + "&";
+
+        url += "zoom=" + zoom.toString();
+        xhr.open('GET', url);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            let content  = xhr.responseText;
+            let json = JSON.parse(content);
+
+            solrad_annual.innerText = json.pvwatts.outputs.solrad_annual;
+            capacity_factor.innerText = json.pvwatts.outputs.capacity_factor;
+
+            current_ac_annual = parseFloat(json.pvwatts.outputs.ac_annual);
+
+            panels.forEach((panel) => {
+              panel.setMap(null);
+              panel = null;
+            });
+            panels = [];
+            console.log(json);
+
+            json['rects'].forEach((rect) =>{
+              let panel = new google.maps.Polygon({
+                path: rect,
+                geodesic: false,
+                strokeColor: '#000000',
+                strokeOpacity: 0.5,
+                strokeWeight: 1
+              });
+              panel.setMap(map);
+              panels.push(panel);
+            });
+            slider.max = panels.length;
+            slider.value = slider.max;
+            total_ac_annual = current_ac_annual * slider.value;
+            ac_annual.innerText = total_ac_annual;
+          }
+        };
+        xhr.send(null);
+        google.maps.event.removeListener(listener);
+      };
+      listener = map.addListener('idle', action_func);
+
+    };
+
+    autocomplete.addListener('place_changed', function() {
+      let place = this.getPlace();
+      let location = place.geometry.location;
+      map.setCenter(location.lat(), location.lng());
+      goMaxZoom(location);
+    });
+
+
+    map.addListener('click', function(e) {
+      const latLng = e.latLng;
+      const lat = latLng.lat();
+      const lng = latLng.lng();
+
+      placeMarker(map, latLng);
+    });
+  }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU0TUFdkbHi0O4yAUPMPxSC7tzyTy84AY&callback=initMap&libraries=places,geometry,drawing,visualization">
+</script>
+</body>
+</html>
