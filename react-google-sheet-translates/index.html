@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)file:///C:/Users/subme/Downloads/Prism%20-%20Bootstrap%204%20Open%20Source%20Landing%20Page%20Template.html -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Required meta tags -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Prism - Bootstrap 4 Open Source Landing Page Template</title>
+  <meta name="description" content="Prism is a beautiful Bootstrap 4 template for open-source landing pages.">
+
+  <!--Google font-->
+  <link href="./files/css" rel="stylesheet">
+
+  <!-- Bootstrap CSS / Color Scheme -->
+  <link rel="stylesheet" href="./files/bootstrap.css">
+</head>
+<body cz-shortcut-listen="true">
+
+<!--Header Section-->
+<section class="bg-gradient pt-5 pb-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+        <div class="heading-brand bg-gradient-text">react-google-sheet-translates</div>
+        <a href="https://github.com/ucozlab/react-google-sheet-translates" class="btn btn-dark svg-icon"
+           target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="feather feather-github mr-2">
+            <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          Contribute
+        </a>
+      </div>
+    </div>
+    <div class="row mt-6">
+      <div class="col-md-8 mx-auto text-center">
+        <h1>Keep your react app translates in one google sheet document</h1>
+<!--        <p class="bg-gradient-text lead mb-5">Prism is a lightweight, extensible syntax highlighter, built with modern-->
+<!--          web-->
+<!--          standards in mind. It’s used in thousands of websites, including some of those you visit daily.</p>-->
+        <a href="https://docs.google.com/spreadsheets/d/1hHINckSe9FmYTkpfBpS8jzgk-QxurPNbW1B4rtE6wy0
+" class="btn btn-success svg-icon" target="_blank">Open Google Sheet Example</a>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-9 mx-auto">
+        <div class="code-window">
+          <div class="dots">
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="green"></div>
+            <span>App.js</span>
+          </div>
+          <pre class=" line-numbers  language-javascript"><code class="  language-javascript"><span
+              class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span
+              class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Provider<span class="token punctuation">}</span> <span
+                class="token keyword">from</span> <span class="token string">"react-redux"</span><span
+                class="token punctuation">;</span> <span class="token comment">// optional</span>
+<span class="token keyword">import</span> TranslatesProvider <span
+                class="token keyword">from</span> <span class="token string">"react-google-sheet-translates"</span><span
+                class="token punctuation">;</span>
+
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">"./store"</span><span
+                class="token punctuation">;</span> <span class="token comment">// optional</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span
+                class="token punctuation">()</span> <span
+                class="token punctuation">{</span>
+
+  <span class="token keyword">const</span> translatesOptions <span
+                class="token punctuation">=</span> <span class="token punctuation">{</span>
+      apiKey<span class="token punctuation">:</span> <span class="token constant">API_KEY</span><span class="token punctuation">,</span> <span class="token comment">// example: NIxaSyLAhztiYr6Zx9xBJcZqJSmgPW8PG_3ql5U</span>
+      clientId<span class="token punctuation">:</span> <span class="token constant">CLIENT_ID</span><span class="token punctuation">,</span> <span class="token comment">// example: 1078901461727-4v7m43c7lbjt2fv1nlt6ianppv9q8acas.apps.googleusercontent.com</span>
+      spreadsheetId<span class="token punctuation">:</span> <span class="token constant">SPREADSHEET_TRANSLATES_ID</span><span class="token punctuation">,</span> <span class="token comment">// example: 163VukGK4efANAcqbf3cAC3xRc2wNMArSB8jfdvq8XPZ</span>
+      locale<span class="token punctuation">:</span> <span class="token string">"en-US"</span><span class="token punctuation">,</span> <span class="token comment">// your google doc first column(default is en-US)</span>
+  <span class="token punctuation">}</span><span
+                class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <code>&lt;TranslatesProvider {...translatesOptions}&gt;</code>
+      <code>&lt;Provider store={store}&gt;</code>
+        <code>&lt;YourAwesomeApp /&gt;</code>
+      <code>&lt;/Provider&gt;</code>
+    <code>&lt;/TranslatesProvider&gt;</code>
+  )
+<span class="token punctuation">}</span><span aria-hidden="true"
+                                              class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Features Section-->
+<section class="py-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2 class="text-center text-md-left">More documentation <span class="text-success">Coming soon...</span></h2>
+<!--        <div class="row feature-grid">-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-check-circle">-->
+<!--                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>-->
+<!--                    <polyline points="22 4 12 14.01 9 11.01"></polyline>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Dead Simple-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-command">-->
+<!--                    <path-->
+<!--                        d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Highly Intuitive-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-feather">-->
+<!--                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>-->
+<!--                    <line x1="16" y1="8" x2="2" y2="22"></line>-->
+<!--                    <line x1="17" y1="15" x2="9" y2="15"></line>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Light as a Feather-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-zap">-->
+<!--                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Blazing Fast-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-git-pull-request">-->
+<!--                    <circle cx="18" cy="18" r="3"></circle>-->
+<!--                    <circle cx="6" cy="6" r="3"></circle>-->
+<!--                    <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>-->
+<!--                    <line x1="6" y1="9" x2="6" y2="21"></line>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Extensible-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-6">-->
+<!--            <div class="media">-->
+<!--              <div class="icon-box">-->
+<!--                <div class="icon-box-inner">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"-->
+<!--                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                       class="feather feather-droplet">-->
+<!--                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>-->
+<!--                  </svg>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media-body">-->
+<!--                Easy Styling-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--&lt;!&ndash;Used By Section&ndash;&gt;-->
+<!--<section class="pb-6">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-8 mx-auto">-->
+<!--        <h2 class="text-center text-md-left">Used by Thousands of Companies</h2>-->
+<!--        <p class="lead text-muted">Prism.js is used on several websites, small and large.</p>-->
+<!--        <div class="mt-5 d-flex flex-row justify-content-md-between flex-wrap press-icons">-->
+<!--          <img src="./files/google.com.download" alt="Google">-->
+<!--          <img src="./files/twitter.com.download" alt="Twitter">-->
+<!--          <img src="./files/vuejs.org" alt="Veu.js">-->
+<!--          <img src="./files/stripe.com.download" alt="Stripe">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--footer-->
+<footer class="py-5 bg-light">
+  <div class="container">
+<!--    <div class="row">-->
+<!--      <div class="col-12 text-center">-->
+<!--        <ul class="list-inline">-->
+<!--          <li class="list-inline-item"><a href="https://prismjs.com/test.html">Test Drive</a></li>-->
+<!--          <li class="list-inline-item"><a href="https://prismjs.com/extending.html">API Docs</a></li>-->
+<!--          <li class="list-inline-item"><a href="https://github.com/LeaVerou/prism/">Fork Prism.js on GitHub</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="row my-2">
+      <div class="col-md-4 mx-auto text-muted text-center small-xl">
+        © 2020 Ucozlab
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./files/jquery-3.2.1.min.js.download"></script>
+<script src="./files/scripts.js.download"></script>
+
+
+</body>
+</html>
